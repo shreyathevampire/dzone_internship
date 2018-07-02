@@ -2,22 +2,45 @@
   margin: 0;
   padding: 0;
 }
-html,body{height:100%;}
+  html {
+  background: url(../img/GreyWeavePaper-Portrait.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}
+
 .card-img-top{
-height: 400px;
+height: 200px;
 opacity: 1;
 bottom: 0;
 width: 100%;
 }
-
+.vl{
+  border-left: 3px solid blue;
+    height: 250px;
+    color: #DCDCDC;
+}
 #atom{
 /* Add shadows to create the "card" effect */
 box-shadow: 5px 10px 18px #888888;
 transition: 0.3s;
 background-color: #eee;
 }
+#android {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 5px 10px 18px #888888;
+    transition: 0.3s;
+}
+p{
+  font-family: Noto Sans, sans-serif;
+  font-size: 20px;
+}
+
 
 .jumbotron{
   min-height: 220px;
@@ -37,9 +60,10 @@ background-color: #eee;
   gradient: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.7));
 }
 /* On mouse-over, add a deeper shadow */
-.card:hover {
+/* .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+
+} */
 
 /* Add some padding inside the card container */
 
@@ -48,18 +72,17 @@ background-color: #eee;
   width: 1000px;
   color: black;
 } */
-
+/*
 
 #myCarousel .carousel-caption{
-  top: 30%;
   transform: translate(40%,-120%);
   bottom: initial;
 
 
-}
-#fontsiz{
+} */
+/* #fontsiz{
   font-size: 32px;
-}
+} */
  /* #myCarousel .carousel-caption h1{
   top: 30%;
   transform: translate(40%,-90%);
@@ -87,7 +110,8 @@ font-size:     32px;
 }
 
 #body{
-background-color:#DCDCDC ;
+background-color:#DCDCDC;
+margin-top: 10px;
 }
 
  .footer {
@@ -119,14 +143,22 @@ background-color:#DCDCDC ;
      width: 100%;
      position: fixed;
      display: block;
-     //background-color: #FFC414;  //prevent overlapping
+     background-color: #283e4a;  //prevent overlapping
      top: 0;
      left: 0;
      z-index: 9999;               //also prevent overlapping
-     height: 30px;
+     height: 70px;
+     padding: 10px;
+
   }
+  .navbar-inverse{
+    background: #283e4a;
+    padding: 8px;
+    font-size: 17px;
+  }
+
   .navbar-fixed-top {
-min-height: 80px;
+min-height: 70px;
 }
 
 @media (min-width: 768px) {
@@ -137,12 +169,13 @@ min-height: 50px;
 }
   .active,
   .navbar-nav li a{
-    line-height: 11px;
+    /* line-height: 11px;
   margin-left: 05px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 20px;
   /* padding: 5px; */
-  padding-top: 10px;
+
+  padding: 10px;
 
   }
 .navbar-nav li a:hover {
@@ -151,6 +184,7 @@ min-height: 50px;
   }
   .navbar-nav li{
     color: #000;
+      padding: 0 0 0 20px;
   }
   .btn-primary-outline {
     background-color: transparent;
@@ -163,13 +197,15 @@ min-height: 50px;
     background-position: center;
     background-size: cover;
   }
-  .navbar-inverse{
-    background-color: transparent;
+  /* .navbar{
+    /* background-color: transparent;
      background: transparent;
       background:rgba(0,0,0,0.5);
-       background:#000;
-     border-color: transparent;
-  }
+       background:#000; */
+     /* border-color: transparent; */
+    /* background-color: #222;
+     border-color: #080808;
+  } */
   .navbar-default{
     background:transparent;
     background-image:none;
@@ -179,6 +215,10 @@ min-height: 50px;
   .nav navbar-nav{
     display: inline-block;
     /* padding-top:  */
+      padding: 0 0 0 20px;
+  }
+  .nav navbar-right{
+    margin-right: 100px;
   }
   .navbar-brand,
   {
@@ -197,7 +237,7 @@ min-height: 50px;
   /* Create three equal columns that floats next to each other */
   .column {
       float: left;
-       width: 25%;
+       width: 24%;
 
        /* column-count: 4; */
       display: none; /* Hide columns by default */
@@ -269,7 +309,30 @@ list-style-type: none;
   #category.active{
     background-color: yellow;
   }
-.card{
+/* .card{
   height: 230px;
 
+} */
+/*Full Width Slider Formatting */
+/* Carousel base class */
+.carousel {
+    padding-top: 0px;
+    height: 100%;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color:#bbb;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
 }
